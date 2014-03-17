@@ -1,0 +1,288 @@
+/*
+ * @(#) CategoryGroup.java 1.0, 2014. 2. 11.
+ * 
+ * Copyright (c) 2014 Jong-Bok,Park  All rights reserved.
+ */
+package com.forif.rclog.ui;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
+import org.apache.commons.lang.StringUtils;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.TableEditor;
+import org.eclipse.swt.events.DisposeEvent;
+import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.events.MouseEvent;
+import org.eclipse.swt.events.MouseListener;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Cursor;
+import org.eclipse.swt.graphics.RGB;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Combo;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Table;
+import org.eclipse.swt.widgets.TableItem;
+import org.eclipse.swt.widgets.Text;
+
+import com.forif.rclog.core.CRUD;
+import com.forif.rclog.core.Category;
+
+/**
+ * @author Jong-Bok,Park (asdkf20@naver.com)
+ * @version 1.0,  2014. 2. 17.
+ * 
+ */
+public class CategoryGroup extends Group implements CategoryView {
+
+	private List<Control> controls = new ArrayList<Control>();
+	private final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy/MM/dd kk:mm:ss");
+	private static List<Category> ORG_LIST = new Vector<Category>();
+	private static int TBL_SEQ;
+	private final static String[] LOG_LEVEL = {"DEBUG","INFO","WARN","ERROR","FATAL"};
+	private final static RGB BACKGROUND_C = new RGB(173, 255, 47);
+	private final static RGB BACKGROUND_U = new RGB(176, 196, 222);
+	private final static RGB BACKGROUND_D = new RGB(255, 99, 71);
+	
+	private Cursor waitCursor = new Cursor(this.getDisplay(), SWT.CURSOR_WAIT);
+	private Cursor defaultCursor;
+	private Label lbCategory;
+	private Text txCategory;
+	private Label lbLevel;
+	private Combo cbLevel;
+	private Button btnAdd;
+	private Button btnDel;
+	private Table tblCategory;
+
+	public CategoryGroup(Composite parent, int style) {
+		super(parent, style);
+		this.init();
+	}
+	
+	private void init(){
+		lbCategory = new Label(this, SWT.NULL);
+		lbCategory.setText("Category : ");
+		lbCategory.setBounds(20, 20, 70, 20);
+		controls.add(lbCategory);
+		txCategory = new Text(this, SWT.SINGLE | SWT.BORDER);
+		txCategory.setBounds(UIUtils.getBoundsH(lbCategory, 5, 290));
+		controls.add(txCategory);
+		lbLevel = new Label(this, SWT.NULL);
+		lbLevel.setText("Level : ");
+		lbLevel.setBounds(UIUtils.getBoundsH(txCategory, 30, 50));
+		controls.add(lbLevel);
+		cbLevel = new Combo(this, SWT.SIMPLE| SWT.DROP_DOWN| SWT.READ_ONLY);
+		cbLevel.setItems(LOG_LEVEL);
+		cbLevel.setBounds(UIUtils.getBoundsH(lbLevel, 5, 70));
+		cbLevel.setText("DEBUG");
+		controls.add(cbLevel);
+		
+		tblCategory = new CategoryTable(this, SWT.FULL_SELECTION | SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+		tblCategory.setHeaderVisible(true);
+		tblCategory.setLinesVisible(true);
+		tblCategory.setBounds(UIUtils.getBoundsV(lbCategory, 10, 750, 300));
+		controls.add(tblCategory);
+
+		btnDel = new Button(this, SWT.PUSH);
+		btnDel.setText("Delete");
+		btnDel.setBounds(tblCategory.getBounds().x + tblCategory.getBounds().width - 50, cbLevel.getBounds().y, 50, cbLevel.getBounds().height);
+		btnDel.setEnabled(false);
+		btnDel.addMouseListener(new MouseListener() {
+			
+			public void mouseUp(MouseEvent e) {
+				TableItem[] items = tblCategory.getSelection();
+				for(TableItem item : items)
+					item.setBackground(new Color(item.getDisplay(), BACKGROUND_D));
+				CategoryGroup.this.setCursor(defaultCursor);
+			}
+			
+			public void mouseDown(MouseEvent e) {
+				defaultCursor = CategoryGroup.this.getCursor();
+				CategoryGroup.this.setCursor(waitCursor);
+			}
+			
+			public void mouseDoubleClick(MouseEvent e) {
+			}
+		});
+		controls.add(btnDel);
+		
+		btnAdd = new Button(this, SWT.PUSH);
+		btnAdd.setText("Add");
+		btnAdd.setBounds(UIUtils.getBoundsH(btnDel, 10, 50, UIUtils.LEFT));
+		btnAdd.setEnabled(false);
+		btnAdd.addMouseListener(new MouseListener() {
+			
+			public void mouseUp(MouseEvent e) {
+				final String strCategory = txCategory.getText();
+				final String strLevel = cbLevel.getText();
+				try{
+					if(isDuply(strCategory)){
+						MessageDialog.openError(CategoryGroup.this.getShell(), "Add", "It was already added!");
+						return;
+					}
+					if(StringUtils.isEmpty(strCategory)){
+						MessageDialog.openError(CategoryGroup.this.getShell(), "Add", "Input category name!");
+						return;
+					}
+					
+					final TableItem item = new TableItem(tblCategory, SWT.NONE);
+					item.setText(
+							new String[]{String.valueOf(TBL_SEQ++)
+									, strCategory
+									, strLevel
+									, null
+									, null});
+					item.setBackground(new Color(item.getDisplay(), BACKGROUND_C));
+					final TableEditor editor = new TableEditor(tblCategory);
+					final Combo cb = new Combo(tblCategory, SWT.SIMPLE| SWT.DROP_DOWN| SWT.READ_ONLY);
+					cb.setItems(LOG_LEVEL);
+					cb.setText(strLevel);
+					cb.addSelectionListener(new SelectionListener() {
+						
+						public void widgetSelected(SelectionEvent e) {
+							String text = ((Combo)e.getSource()).getText();
+							item.setText(2, text);
+						}
+						
+						public void widgetDefaultSelected(SelectionEvent e) { }
+					});
+					editor.grabHorizontal = true;
+					editor.setEditor(cb, item, 2);
+					item.addDisposeListener(new DisposeListener() {
+						
+						public void widgetDisposed(DisposeEvent e) {
+							cb.dispose();
+							editor.dispose();
+						}
+					});
+					
+				}finally{
+					CategoryGroup.this.setCursor(defaultCursor);
+				}
+			}
+			
+			public void mouseDown(MouseEvent e) {
+				defaultCursor = CategoryGroup.this.getCursor();
+				CategoryGroup.this.setCursor(waitCursor);
+			}
+			
+			public void mouseDoubleClick(MouseEvent e) {
+			}
+			
+			private boolean isDuply(String strCategory){
+				TableItem[] items = tblCategory.getItems();
+				for(TableItem item : items){
+					if(StringUtils.equals(item.getText(1), strCategory))
+						return true;
+				}
+				return false;
+			}
+			
+		});
+		controls.add(btnAdd);
+		
+
+	}
+	
+	@Override
+	public void dispose(){
+		for(Control control : controls){
+			control.dispose();
+		}
+		controls.clear();
+		super.dispose();
+	}
+
+	@Override
+	public void checkSubclass(){
+		
+	}
+
+	public void refreshCategories(List<Category> categories) {
+		ORG_LIST.clear();
+		ORG_LIST.addAll(categories);
+		btnAdd.setEnabled(true);
+		btnDel.setEnabled(true);
+		
+		tblCategory.removeAll();
+		tblCategory.redraw();		
+		TBL_SEQ = 1;
+		for(Category c : categories){
+			final TableEditor editor = new TableEditor(tblCategory);
+			final TableItem item = new TableItem(tblCategory, SWT.NONE);
+			final String level = c.getLevel();
+			item.setText(
+					new String[]{String.valueOf(TBL_SEQ++)
+							, c.getCategoryName()
+							, c.getLevel()
+							, DATE_FORMAT.format(c.getModifiedDate())
+							, c.getModifiedIp()});
+			final Combo cb = new Combo(tblCategory, SWT.SIMPLE| SWT.DROP_DOWN| SWT.READ_ONLY);
+			cb.setItems(LOG_LEVEL);
+			cb.setText(c.getLevel());
+			cb.addSelectionListener(new SelectionListener() {
+				
+				public void widgetSelected(SelectionEvent e) {
+					if(item.isDisposed())
+						return;
+					String text = ((Combo)e.getSource()).getText();
+					item.setText(2, text);
+					if(StringUtils.equals(level, text))
+						item.setBackground(item.getDisplay().getSystemColor(SWT.COLOR_WHITE));
+					else
+						item.setBackground(new Color(item.getDisplay(), BACKGROUND_U));
+				}
+				
+				public void widgetDefaultSelected(SelectionEvent e) { }
+			});
+			editor.grabHorizontal = true;
+			editor.setEditor(cb, item, 2);
+			item.addDisposeListener(new DisposeListener() {
+				
+				public void widgetDisposed(DisposeEvent e) {
+					cb.dispose();
+					editor.dispose();
+				}
+			});
+		}
+	}
+
+	public void connected() {
+	}
+
+	public void disConnected() {
+		btnAdd.setEnabled(false);
+		btnDel.setEnabled(false);
+		tblCategory.removeAll();
+		ORG_LIST.clear();
+	}
+
+	public List<Category> getEditCategories() {
+		List<Category> editList = new ArrayList<Category>();
+		TableItem[] items = tblCategory.getItems();
+		for(TableItem item : items){
+			RGB rgb = item.getBackground().getRGB();
+			if(rgb.equals(BACKGROUND_C)){
+				Category category = new Category(item.getText(1), item.getText(2), CRUD.C);
+				editList.add(category);
+			}else if(rgb.equals(BACKGROUND_U)){
+				Category category = new Category(item.getText(1), item.getText(2), CRUD.U);
+				editList.add(category);
+			}else if(rgb.equals(BACKGROUND_D)){
+				Category category = new Category(item.getText(1), item.getText(2), CRUD.D);
+				editList.add(category);
+			}
+		}
+		
+		return editList;
+	}
+
+}

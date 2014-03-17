@@ -1,0 +1,96 @@
+/*
+ * @(#) CategoryService.java 1.0, 2014. 2. 17.
+ * 
+ * Copyright (c) 2014 ������  All rights reserved.
+ */
+ 
+package com.forif.rclog.jmx;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.management.Notification;
+import javax.management.NotificationBroadcasterSupport;
+
+import org.apache.commons.lang.StringUtils;
+
+import com.forif.rclog.agent.RCLogEditable;
+import com.forif.rclog.core.CRUD;
+import com.forif.rclog.core.Category;
+import com.forif.rclog.core.RCLogInfo;
+
+/**
+ * @author Jong-Bok,Park (asdkf20@naver.com)
+ * @version 1.0,  2014. 2. 17.
+ * 
+ */
+public class CategoryEmitter extends NotificationBroadcasterSupport 
+								implements CategoryEmitterMBean{
+	
+	private static List<Category> CATEGORIES = new ArrayList<Category>();
+	private RCLogEditable logEditor;
+
+	public CategoryEmitter(RCLogEditable logEditor){
+		super();
+		this.logEditor = logEditor;
+	}
+	
+	/* (non-Javadoc)
+	 * @see com.forif.rclog.core.CategoryMBean#getCategories(java.lang.String)
+	 */
+	public List<Category> getCategories() {
+		return new ArrayList<Category>(CATEGORIES);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.forif.rclog.core.CategoryMBean#setCategories(java.util.List, java.lang.String)
+	 */
+	public void setCategories(List<Category> categories, String remoteIp){
+		if(categories == null || categories.size() < 1)
+			return;
+		Date modifiedDate = new Date();
+		synchronized (CATEGORIES) {
+			for(Category category : categories){
+				if(category.getType().equals(CRUD.C)){
+					logEditor.setJmxLogger(category.getCategoryName(), category.getLevel());
+					category.setModifiedDate(modifiedDate);
+					category.setModifiedIp(remoteIp);
+					CATEGORIES.add((Category) category.clone());
+				}else if(category.getType().equals(CRUD.U)){
+					logEditor.setJmxLogger(category.getCategoryName(), category.getLevel());
+					Category org = this.getCategory(category.getCategoryName());
+					org.setLevel(category.getLevel());
+					org.setModifiedDate(modifiedDate);
+					org.setModifiedIp(remoteIp);
+				}else if(category.getType().equals(CRUD.D)){
+					logEditor.unsetJmxLogger(category.getCategoryName());
+					Category c = this.getCategory(category.getCategoryName());
+					CATEGORIES.remove(c);
+				}
+			}
+		}
+		
+		long st = System.currentTimeMillis();
+		String message = StringUtils.EMPTY;
+		if(StringUtils.isNotEmpty(remoteIp))
+			message = "Modified from [IP:" + remoteIp +"]";
+		
+        Notification note = new Notification(
+                  RCLogInfo.CATEGORY_EVENT_TYPE
+                , this.getClass().getName()
+                , st
+                , st
+                , message);
+        note.setUserData(new ArrayList<Category>(CATEGORIES));
+		sendNotification(note);
+	}
+	
+	private Category getCategory(String categoryName){
+		for(Category c : CATEGORIES)
+			if(StringUtils.equals(c.getCategoryName(), categoryName))
+				return c;
+		return null;
+	}
+
+}

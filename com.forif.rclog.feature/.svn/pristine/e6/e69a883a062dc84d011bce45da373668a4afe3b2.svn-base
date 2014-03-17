@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.forif.rclog.feature"
+      label="RCLog4j"
+      version="1.0.0.beta"
+      provider-name="Jong-Bok,Park"
+      plugin="com.forif.rclog.client">
+
+   <description url="http://dev.naver.com/projects/rclog">
+      1. RCLog4j(Runtime Configuration Log4j)는 Apache log4j 1.2.x,
+Eclipse3.5이상에서 동작한다.
+2. RCLog4j Agent와 RCLOG Client로 분리 배포된다.
+3. RCLog4j Agent는 Java Application Software로 Apache log4j 1.2.x를
+사용하여 구현되어진 Application 호출로 동작하고, Broadcast를 지원하여 접속된 사용자에게 동기화를
+지원한다.
+4. RCLog4j Client는 Eclipse plugin으로 배포되어 Agent와 JMX통신을 하며 Runtime환경에서
+Log Category를 등록하고 Log Level을 조절할 수 있다.
+   </description>
+
+   <copyright url="http://dev.naver.com/projects/rclog">
+      Copyright (c) 2014 Jong-Bok,Park(asdkf20@naver.com) All right reserved
+   </copyright>
+
+   <license url="http://dev.naver.com/projects/rclog">
+      1. 이 소프트웨어는 집,회사등엔서 무료로 사용할 수 있는 자유소프트웨어이다.
+2. 이 소프트웨어는 오픈소스(GPL3.0)라이선스 규칙을 준수한다.
+   </license>
+
+   <plugin
+         id="com.forif.rclog.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.forif.rclog.client"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

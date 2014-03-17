@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: rclog-core
+Bundle-SymbolicName: com.forif.rclog.core;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.forif.rclog.core,
+ com.forif.rclog.jmx
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

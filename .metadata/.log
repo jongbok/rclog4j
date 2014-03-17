@@ -1,0 +1,1738 @@
+!SESSION 2014-03-04 14:28:16.121 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2014-03-04 14:33:08.934
+!MESSAGE Unable to load the repository file:/D:/rclog/
+!STACK 1
+org.eclipse.equinox.internal.provisional.p2.core.ProvisionException: No repository found at file:/D:/rclog/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:380)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:641)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.loadMetadataRepository(ProvisioningUtil.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableMetadataRepositoryManager.doLoadRepository(QueryableMetadataRepositoryManager.java:55)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadRepository(QueryableRepositoryManager.java:195)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadAll(QueryableRepositoryManager.java:108)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.run(PreloadingRepositoryHandler.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2014-03-04 14:33:08.936
+!MESSAGE No repository found at file:/D:/rclog/.
+!SESSION 2014-03-04 15:27:31.646 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 15:52:33.819
+!MESSAGE SVN: '0x00000000: Open Project' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 15:52:33.819
+!MESSAGE SVN: '0x00000000: Open Project' operation finished with error: 0x00000000: Unable connect to 'rclog-agent' project.
+Please check that SVN meta-information exists and its format is supported by the current SVN plug-in version.
+If so, it is possible that project working copy is relocated outside plug-in control.
+At the current moment project will be automatically disconnected from source control.
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: 0x00000000: Unable connect to 'rclog-agent' project.
+Please check that SVN meta-information exists and its format is supported by the current SVN plug-in version.
+If so, it is possible that project working copy is relocated outside plug-in control.
+At the current moment project will be automatically disconnected from source control.
+	at org.eclipse.team.svn.core.SVNTeamProvider$1.runImpl(SVNTeamProvider.java:235)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility$1$1.run(ProgressMonitorUtility.java:60)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility$1.run(ProgressMonitorUtility.java:58)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 15:52:33.889
+!MESSAGE SVN: '0x00000121: Share Projects' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 15:52:33.889
+!MESSAGE Share project was failed.
+!STACK 0
+org.eclipse.team.svn.core.operation.HiddenException: 0x00000000: Unable connect to 'rclog-agent' project.
+Please check that SVN meta-information exists and its format is supported by the current SVN plug-in version.
+If so, it is possible that project working copy is relocated outside plug-in control.
+At the current moment project will be automatically disconnected from source control.
+	at org.eclipse.team.svn.core.SVNTeamProvider.breakThreadExecution(SVNTeamProvider.java:242)
+	at org.eclipse.team.svn.core.SVNTeamProvider.connectToProject(SVNTeamProvider.java:194)
+	at org.eclipse.team.svn.core.SVNTeamProvider.configureProject(SVNTeamProvider.java:116)
+	at org.eclipse.team.core.RepositoryProvider.configure(RepositoryProvider.java:334)
+	at org.eclipse.team.core.RepositoryProvider.map(RepositoryProvider.java:129)
+	at org.eclipse.team.svn.core.SVNTeamProvider.map(SVNTeamProvider.java:108)
+	at org.eclipse.team.svn.core.SVNTeamProjectMapper.map(SVNTeamProjectMapper.java:31)
+	at org.eclipse.team.svn.core.operation.local.management.ShareProjectOperation$2.run(ShareProjectOperation.java:191)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doSubTask(ProgressMonitorUtility.java:118)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:156)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:151)
+	at org.eclipse.team.svn.core.operation.local.management.ShareProjectOperation.runImpl(ShareProjectOperation.java:176)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.team.svn.ui.utility.SVNTeamOperationWrapper.run(SVNTeamOperationWrapper.java:35)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext.run(JobRunnableContext.java:144)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext$ResourceJob.runInWorkspace(JobRunnableContext.java:72)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 15:54:35.953
+!MESSAGE SVN: '0x00000000: Open Project' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 15:54:35.953
+!MESSAGE SVN: '0x00000000: Open Project' operation finished with error: 0x00000000: Unable connect to 'rclog-agent' project.
+Please check that SVN meta-information exists and its format is supported by the current SVN plug-in version.
+If so, it is possible that project working copy is relocated outside plug-in control.
+At the current moment project will be automatically disconnected from source control.
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: 0x00000000: Unable connect to 'rclog-agent' project.
+Please check that SVN meta-information exists and its format is supported by the current SVN plug-in version.
+If so, it is possible that project working copy is relocated outside plug-in control.
+At the current moment project will be automatically disconnected from source control.
+	at org.eclipse.team.svn.core.SVNTeamProvider$1.runImpl(SVNTeamProvider.java:235)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility$1$1.run(ProgressMonitorUtility.java:60)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility$1.run(ProgressMonitorUtility.java:58)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 15:54:36.008
+!MESSAGE SVN: '0x00000121: Share Projects' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 15:54:36.008
+!MESSAGE Share project was failed.
+!STACK 0
+org.eclipse.team.svn.core.operation.HiddenException: 0x00000000: Unable connect to 'rclog-agent' project.
+Please check that SVN meta-information exists and its format is supported by the current SVN plug-in version.
+If so, it is possible that project working copy is relocated outside plug-in control.
+At the current moment project will be automatically disconnected from source control.
+	at org.eclipse.team.svn.core.SVNTeamProvider.breakThreadExecution(SVNTeamProvider.java:242)
+	at org.eclipse.team.svn.core.SVNTeamProvider.connectToProject(SVNTeamProvider.java:194)
+	at org.eclipse.team.svn.core.SVNTeamProvider.configureProject(SVNTeamProvider.java:116)
+	at org.eclipse.team.core.RepositoryProvider.configure(RepositoryProvider.java:334)
+	at org.eclipse.team.core.RepositoryProvider.map(RepositoryProvider.java:129)
+	at org.eclipse.team.svn.core.SVNTeamProvider.map(SVNTeamProvider.java:108)
+	at org.eclipse.team.svn.core.SVNTeamProjectMapper.map(SVNTeamProjectMapper.java:31)
+	at org.eclipse.team.svn.core.operation.local.management.ShareProjectOperation$2.run(ShareProjectOperation.java:191)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doSubTask(ProgressMonitorUtility.java:118)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:156)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:151)
+	at org.eclipse.team.svn.core.operation.local.management.ShareProjectOperation.runImpl(ShareProjectOperation.java:176)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.team.svn.ui.utility.SVNTeamOperationWrapper.run(SVNTeamOperationWrapper.java:35)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext.run(JobRunnableContext.java:144)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext$ResourceJob.runInWorkspace(JobRunnableContext.java:72)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 16:04:45.140
+!MESSAGE SVN: '0x00000000: Open Project' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 16:04:45.140
+!MESSAGE SVN: '0x00000000: Open Project' operation finished with error: 0x00000000: Unable connect to 'rclog-agent' project.
+Please check that SVN meta-information exists and its format is supported by the current SVN plug-in version.
+If so, it is possible that project working copy is relocated outside plug-in control.
+At the current moment project will be automatically disconnected from source control.
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: 0x00000000: Unable connect to 'rclog-agent' project.
+Please check that SVN meta-information exists and its format is supported by the current SVN plug-in version.
+If so, it is possible that project working copy is relocated outside plug-in control.
+At the current moment project will be automatically disconnected from source control.
+	at org.eclipse.team.svn.core.SVNTeamProvider$1.runImpl(SVNTeamProvider.java:235)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility$1$1.run(ProgressMonitorUtility.java:60)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility$1.run(ProgressMonitorUtility.java:58)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 16:04:45.185
+!MESSAGE SVN: '0x00000121: Share Projects' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 16:04:45.185
+!MESSAGE Share project was failed.
+!STACK 0
+org.eclipse.team.svn.core.operation.HiddenException: 0x00000000: Unable connect to 'rclog-agent' project.
+Please check that SVN meta-information exists and its format is supported by the current SVN plug-in version.
+If so, it is possible that project working copy is relocated outside plug-in control.
+At the current moment project will be automatically disconnected from source control.
+	at org.eclipse.team.svn.core.SVNTeamProvider.breakThreadExecution(SVNTeamProvider.java:242)
+	at org.eclipse.team.svn.core.SVNTeamProvider.connectToProject(SVNTeamProvider.java:194)
+	at org.eclipse.team.svn.core.SVNTeamProvider.configureProject(SVNTeamProvider.java:116)
+	at org.eclipse.team.core.RepositoryProvider.configure(RepositoryProvider.java:334)
+	at org.eclipse.team.core.RepositoryProvider.map(RepositoryProvider.java:129)
+	at org.eclipse.team.svn.core.SVNTeamProvider.map(SVNTeamProvider.java:108)
+	at org.eclipse.team.svn.core.SVNTeamProjectMapper.map(SVNTeamProjectMapper.java:31)
+	at org.eclipse.team.svn.core.operation.local.management.ShareProjectOperation$2.run(ShareProjectOperation.java:191)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doSubTask(ProgressMonitorUtility.java:118)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:156)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:151)
+	at org.eclipse.team.svn.core.operation.local.management.ShareProjectOperation.runImpl(ShareProjectOperation.java:176)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.team.svn.ui.utility.SVNTeamOperationWrapper.run(SVNTeamOperationWrapper.java:35)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext.run(JobRunnableContext.java:144)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext$ResourceJob.runInWorkspace(JobRunnableContext.java:72)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 16:12:20.620
+!MESSAGE SVN: '0x00000121: Share Projects' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2014-03-04 16:12:20.621
+!MESSAGE Share project was failed.
+!STACK 0
+org.eclipse.team.svn.core.connector.SVNConnectorException: svn: The path 'D:\workspace_version\3.5\rclog-agent' appears to be part of a Subversion 1.7 or greater
+working copy.  Please upgrade your Subversion client to use this
+working copy.
+	at org.polarion.team.svn.connector.svnkit.SVNKitConnector.handleClientException(SVNKitConnector.java:2318)
+	at org.polarion.team.svn.connector.svnkit.SVNKitConnector.checkout(SVNKitConnector.java:358)
+	at org.eclipse.team.svn.core.extension.factory.ThreadNameModifier.checkout(ThreadNameModifier.java:88)
+	at org.eclipse.team.svn.core.operation.local.management.ShareProjectOperation$2.run(ShareProjectOperation.java:184)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doSubTask(ProgressMonitorUtility.java:118)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:156)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:151)
+	at org.eclipse.team.svn.core.operation.local.management.ShareProjectOperation.runImpl(ShareProjectOperation.java:176)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.team.svn.ui.utility.SVNTeamOperationWrapper.run(SVNTeamOperationWrapper.java:35)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext.run(JobRunnableContext.java:144)
+	at org.eclipse.team.internal.ui.actions.JobRunnableContext$ResourceJob.runInWorkspace(JobRunnableContext.java:72)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.tigris.subversion.javahl.ClientException: svn: The path 'D:\workspace_version\3.5\rclog-agent' appears to be part of a Subversion 1.7 or greater
+working copy.  Please upgrade your Subversion client to use this
+working copy.
+	at org.tigris.subversion.javahl.JavaHLObjectFactory.throwException(JavaHLObjectFactory.java:779)
+	at org.tmatesoft.svn.core.javahl.SVNClientImpl.throwException(SVNClientImpl.java:1954)
+	at org.tmatesoft.svn.core.javahl.SVNClientImpl.checkout(SVNClientImpl.java:2080)
+	at org.polarion.team.svn.connector.svnkit.SVNKitConnector.checkout(SVNKitConnector.java:353)
+	... 22 more
+Caused by: org.tmatesoft.svn.core.SVNException: svn: The path 'D:\workspace_version\3.5\rclog-agent' appears to be part of a Subversion 1.7 or greater
+working copy.  Please upgrade your Subversion client to use this
+working copy.
+	at org.tmatesoft.svn.core.internal.wc.SVNErrorManager.error(SVNErrorManager.java:64)
+	at org.tmatesoft.svn.core.internal.wc.admin.SVNAdminAreaFactory.checkWC(SVNAdminAreaFactory.java:127)
+	at org.tmatesoft.svn.core.internal.wc.admin.SVNAdminAreaFactory.checkWC(SVNAdminAreaFactory.java:77)
+	at org.tmatesoft.svn.core.wc.SVNUpdateClient.doCheckout(SVNUpdateClient.java:924)
+	at org.tmatesoft.svn.core.javahl.SVNClientImpl.checkout(SVNClientImpl.java:2077)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2014-03-04 16:16:56.286
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.OutOfMemoryError: PermGen space)
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:137)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.defineClass(DefaultClassLoader.java:183)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.defineClass(ClasspathManager.java:576)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findClassImpl(ClasspathManager.java:546)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClassImpl(ClasspathManager.java:477)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass_LockClassLoader(ClasspathManager.java:465)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:445)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:211)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:376)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:452)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:405)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:393)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:105)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler.getStatusDialogManager(WorkbenchErrorHandler.java:126)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler.showStatusAdapter(WorkbenchErrorHandler.java:99)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler.access$0(WorkbenchErrorHandler.java:92)
+	at org.eclipse.ui.statushandlers.WorkbenchErrorHandler$1.run(WorkbenchErrorHandler.java:60)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:155)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:158)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+
+!ENTRY org.eclipse.core.jobs 4 2 2014-03-04 16:16:56.287
+!MESSAGE An internal error occurred during: "Install".
+!STACK 0
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.defineClass(DefaultClassLoader.java:183)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.defineClass(ClasspathManager.java:576)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findClassImpl(ClasspathManager.java:546)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClassImpl(ClasspathManager.java:477)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass_LockClassLoader(ClasspathManager.java:465)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:445)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:211)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:376)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:405)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:393)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:105)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.equinox.internal.frameworkadmin.equinox.EquinoxFwConfigFileParser.parseBundleList(EquinoxFwConfigFileParser.java:111)
+	at org.eclipse.equinox.internal.frameworkadmin.equinox.EquinoxFwConfigFileParser.readBundlesList(EquinoxFwConfigFileParser.java:98)
+	at org.eclipse.equinox.internal.frameworkadmin.equinox.EquinoxFwConfigFileParser.readFwConfig(EquinoxFwConfigFileParser.java:226)
+	at org.eclipse.equinox.internal.frameworkadmin.equinox.EquinoxManipulatorImpl.loadWithoutFwPersistentData(EquinoxManipulatorImpl.java:366)
+	at org.eclipse.equinox.internal.frameworkadmin.equinox.EquinoxManipulatorImpl.load(EquinoxManipulatorImpl.java:331)
+	at org.eclipse.equinox.internal.p2.touchpoint.eclipse.LazyManipulator.loadDelegate(LazyManipulator.java:50)
+	at org.eclipse.equinox.internal.p2.touchpoint.eclipse.LazyManipulator.getConfigData(LazyManipulator.java:108)
+	at org.eclipse.equinox.internal.p2.touchpoint.eclipse.actions.InstallBundleAction.installBundle(InstallBundleAction.java:76)
+	at org.eclipse.equinox.internal.p2.touchpoint.eclipse.actions.InstallBundleAction.execute(InstallBundleAction.java:29)
+	at org.eclipse.equinox.internal.p2.engine.ParameterizedProvisioningAction.execute(ParameterizedProvisioningAction.java:35)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Phase.mainPerform(Phase.java:129)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Phase.perform(Phase.java:72)
+	at org.eclipse.equinox.internal.provisional.p2.engine.PhaseSet.perform(PhaseSet.java:44)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Engine.perform(Engine.java:54)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.performProvisioningPlan(ProvisioningUtil.java:389)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProfileModificationOperation.doExecute(ProfileModificationOperation.java:61)
+
+!ENTRY org.eclipse.ui 4 4 2014-03-04 16:17:17.610
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Throwable.printStackTrace(Throwable.java:643)
+	at java.lang.Throwable.printStackTrace(Throwable.java:634)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchErrorHandler.closeWorkbench(IDEWorkbenchErrorHandler.java:268)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchErrorHandler.handleException(IDEWorkbenchErrorHandler.java:155)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchErrorHandler.access$0(IDEWorkbenchErrorHandler.java:146)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchErrorHandler$1.runInUIThread(IDEWorkbenchErrorHandler.java:121)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.ui 4 0 2014-03-04 16:17:17.992
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.OutOfMemoryError: PermGen space)
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:137)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+
+!ENTRY org.eclipse.ui 4 0 2014-03-04 16:17:23.742
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.OutOfMemoryError: PermGen space
+!SESSION 2014-03-04 16:19:35.477 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-03-04 16:19:38.493
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2014-03-04 16:24:36.410 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:25:20.249
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.utility.SVNUtility.getSVNInfoForNotConnected(SVNUtility.java:889)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.performAnalysis(SelectProjectsGroupPage.java:94)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.<init>(SelectProjectsGroupPage.java:78)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.addPages(ShareProjectWizard.java:82)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$1.selectionChanged(ConfigureProjectWizardMainPage.java:148)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2132)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1160)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1190)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:228)
+	at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:222)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:389)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:25:36.608
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.utility.SVNUtility.getSVNInfoForNotConnected(SVNUtility.java:889)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.performAnalysis(SelectProjectsGroupPage.java:94)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.<init>(SelectProjectsGroupPage.java:78)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.addPages(ShareProjectWizard.java:82)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$1.selectionChanged(ConfigureProjectWizardMainPage.java:148)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2132)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1160)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1190)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:228)
+	at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:222)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:389)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.ui 4 0 2014-03-04 16:25:38.760
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.isGroupSelectionRequired(ShareProjectWizard.java:235)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.getStartingPage(ShareProjectWizard.java:102)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage.getNextPage(ConfigureProjectWizardMainPage.java:216)
+	at org.eclipse.jface.wizard.WizardDialog.nextPressed(WizardDialog.java:823)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:369)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:624)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:228)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.ui 4 0 2014-03-04 16:25:39.854
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.isGroupSelectionRequired(ShareProjectWizard.java:235)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.getStartingPage(ShareProjectWizard.java:102)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage.getNextPage(ConfigureProjectWizardMainPage.java:216)
+	at org.eclipse.jface.wizard.WizardDialog.nextPressed(WizardDialog.java:823)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:369)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:624)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:228)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.ui 4 0 2014-03-04 16:25:40.694
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.isGroupSelectionRequired(ShareProjectWizard.java:235)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.getStartingPage(ShareProjectWizard.java:102)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage.getNextPage(ConfigureProjectWizardMainPage.java:216)
+	at org.eclipse.jface.wizard.WizardDialog.nextPressed(WizardDialog.java:823)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:369)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:624)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:228)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2014-03-04 16:28:23.396 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:28:52.106
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.utility.SVNUtility.getSVNInfoForNotConnected(SVNUtility.java:889)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.performAnalysis(SelectProjectsGroupPage.java:94)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.<init>(SelectProjectsGroupPage.java:78)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.addPages(ShareProjectWizard.java:82)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$1.selectionChanged(ConfigureProjectWizardMainPage.java:148)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2132)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1160)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1190)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:228)
+	at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:222)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:389)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:28:55.279
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.utility.SVNUtility.getSVNInfoForNotConnected(SVNUtility.java:889)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.performAnalysis(SelectProjectsGroupPage.java:94)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.<init>(SelectProjectsGroupPage.java:78)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.addPages(ShareProjectWizard.java:82)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$1.selectionChanged(ConfigureProjectWizardMainPage.java:148)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2132)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1160)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1190)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:228)
+	at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:222)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:389)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-04 16:29:58.023
+!MESSAGE NLS missing message: UsageReportPreferencePage_Description_JBDS in: org.tigris.subversion.subclipse.tools.usage.preferences.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-04 16:29:58.023
+!MESSAGE NLS missing message: UsageReportPreferencePage_AllowReporting_JBDS in: org.tigris.subversion.subclipse.tools.usage.preferences.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-04 16:29:58.023
+!MESSAGE NLS missing message: UsageReportPreferencePage_Error_Saving_JBDS in: org.tigris.subversion.subclipse.tools.usage.preferences.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-04 16:29:58.024
+!MESSAGE NLS missing message: GlobalUsageSettings_RemoteProps_URL_JBDS in: org.tigris.subversion.subclipse.tools.usage.preferences.messages
+!SESSION 2014-03-04 16:30:42.228 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:31:08.469
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.utility.SVNUtility.getSVNInfoForNotConnected(SVNUtility.java:889)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.performAnalysis(SelectProjectsGroupPage.java:94)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.<init>(SelectProjectsGroupPage.java:78)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.addPages(ShareProjectWizard.java:82)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$1.selectionChanged(ConfigureProjectWizardMainPage.java:148)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2132)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1160)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1190)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:228)
+	at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:222)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:389)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:31:08.577
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.isGroupSelectionRequired(ShareProjectWizard.java:235)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.getStartingPage(ShareProjectWizard.java:102)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage.getNextPage(ConfigureProjectWizardMainPage.java:216)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$2.doubleClick(ConfigureProjectWizardMainPage.java:156)
+	at org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:819)
+	at org.eclipse.jface.viewers.StructuredViewer.handleDoubleSelect(StructuredViewer.java:1083)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetDefaultSelected(StructuredViewer.java:1195)
+	at org.eclipse.jface.util.OpenStrategy.fireDefaultSelectionEvent(OpenStrategy.java:238)
+	at org.eclipse.jface.util.OpenStrategy.access$0(OpenStrategy.java:235)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:296)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2014-03-04 16:32:50.485 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:33:03.495
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.utility.SVNUtility.getSVNInfoForNotConnected(SVNUtility.java:889)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.performAnalysis(SelectProjectsGroupPage.java:94)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.<init>(SelectProjectsGroupPage.java:78)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.addPages(ShareProjectWizard.java:82)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$1.selectionChanged(ConfigureProjectWizardMainPage.java:148)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2132)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1160)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1190)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:228)
+	at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:222)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:389)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:33:03.631
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.isGroupSelectionRequired(ShareProjectWizard.java:235)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.getStartingPage(ShareProjectWizard.java:102)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage.getNextPage(ConfigureProjectWizardMainPage.java:216)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$2.doubleClick(ConfigureProjectWizardMainPage.java:156)
+	at org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:819)
+	at org.eclipse.jface.viewers.StructuredViewer.handleDoubleSelect(StructuredViewer.java:1083)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetDefaultSelected(StructuredViewer.java:1195)
+	at org.eclipse.jface.util.OpenStrategy.fireDefaultSelectionEvent(OpenStrategy.java:238)
+	at org.eclipse.jface.util.OpenStrategy.access$0(OpenStrategy.java:235)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:296)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2014-03-04 16:33:39.589 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:33:55.793
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.utility.SVNUtility.getSVNInfoForNotConnected(SVNUtility.java:889)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.performAnalysis(SelectProjectsGroupPage.java:94)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.<init>(SelectProjectsGroupPage.java:78)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.addPages(ShareProjectWizard.java:82)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$1.selectionChanged(ConfigureProjectWizardMainPage.java:148)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2132)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1160)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1190)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:228)
+	at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:222)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:389)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:33:55.921
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.isGroupSelectionRequired(ShareProjectWizard.java:235)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.getStartingPage(ShareProjectWizard.java:102)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage.getNextPage(ConfigureProjectWizardMainPage.java:216)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$2.doubleClick(ConfigureProjectWizardMainPage.java:156)
+	at org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:819)
+	at org.eclipse.jface.viewers.StructuredViewer.handleDoubleSelect(StructuredViewer.java:1083)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetDefaultSelected(StructuredViewer.java:1195)
+	at org.eclipse.jface.util.OpenStrategy.fireDefaultSelectionEvent(OpenStrategy.java:238)
+	at org.eclipse.jface.util.OpenStrategy.access$0(OpenStrategy.java:235)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:296)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2014-03-04 16:37:26.564 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:38:04.052
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.utility.SVNUtility.getSVNInfoForNotConnected(SVNUtility.java:889)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.performAnalysis(SelectProjectsGroupPage.java:94)
+	at org.eclipse.team.svn.ui.wizard.shareproject.SelectProjectsGroupPage.<init>(SelectProjectsGroupPage.java:78)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.addPages(ShareProjectWizard.java:82)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$1.selectionChanged(ConfigureProjectWizardMainPage.java:148)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2132)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1160)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1190)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:228)
+	at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:222)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:389)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.jface 4 2 2014-03-04 16:38:04.205
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.isGroupSelectionRequired(ShareProjectWizard.java:235)
+	at org.eclipse.team.svn.ui.wizard.ShareProjectWizard.getStartingPage(ShareProjectWizard.java:102)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage.getNextPage(ConfigureProjectWizardMainPage.java:216)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizardMainPage$2.doubleClick(ConfigureProjectWizardMainPage.java:156)
+	at org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:821)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:819)
+	at org.eclipse.jface.viewers.StructuredViewer.handleDoubleSelect(StructuredViewer.java:1083)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetDefaultSelected(StructuredViewer.java:1195)
+	at org.eclipse.jface.util.OpenStrategy.fireDefaultSelectionEvent(OpenStrategy.java:238)
+	at org.eclipse.jface.util.OpenStrategy.access$0(OpenStrategy.java:235)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:296)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.openWizard(ConfigureProjectWizard.java:224)
+	at org.eclipse.team.internal.ui.wizards.ConfigureProjectWizard.shareProjects(ConfigureProjectWizard.java:124)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction$1.run(ConfigureProjectAction.java:39)
+	at org.eclipse.team.internal.ui.actions.TeamAction$3.run(TeamAction.java:265)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:262)
+	at org.eclipse.team.internal.ui.actions.ConfigureProjectAction.execute(ConfigureProjectAction.java:33)
+	at org.eclipse.team.internal.ui.actions.TeamAction.run(TeamAction.java:514)
+	at org.eclipse.team.internal.ui.actions.TeamAction.runWithEvent(TeamAction.java:548)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2014-03-04 16:39:57.396 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2014-03-04 16:42:35.315
+!MESSAGE An error occurred during the org.eclipse.equinox.internal.provisional.p2.engine.phases.CheckTrust phase.
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2014-03-04 16:42:35.315
+!MESSAGE session context was:(profile=SDKProfile, phase=org.eclipse.equinox.internal.provisional.p2.engine.phases.CheckTrust, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2014-03-04 16:42:35.315
+!MESSAGE Error reading signed content.
+!STACK 0
+java.io.IOException: The file "C:\IDE\eclipse3.5\plugins\org.tigris.subversion.subclipse.doc_1.3.0.jar" does not exist
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleFile.<init>(ZipBundleFile.java:62)
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleFile.<init>(ZipBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:243)
+	at org.eclipse.equinox.internal.provisional.p2.engine.CertificateChecker.checkCertificates(CertificateChecker.java:56)
+	at org.eclipse.equinox.internal.provisional.p2.engine.CertificateChecker.start(CertificateChecker.java:39)
+	at org.eclipse.equinox.internal.provisional.p2.engine.phases.CheckTrust.completePhase(CheckTrust.java:43)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Phase.postPerform(Phase.java:195)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Phase.perform(Phase.java:78)
+	at org.eclipse.equinox.internal.provisional.p2.engine.PhaseSet.perform(PhaseSet.java:44)
+	at org.eclipse.equinox.internal.provisional.p2.engine.Engine.perform(Engine.java:54)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.performProvisioningPlan(ProvisioningUtil.java:389)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProfileModificationOperation.doExecute(ProfileModificationOperation.java:61)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningOperation.execute(ProvisioningOperation.java:37)
+	at org.eclipse.equinox.internal.provisional.p2.ui.ProvisioningOperationRunner$1.run(ProvisioningOperationRunner.java:94)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2014-03-04 17:23:48.011 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-04 17:25:21.220
+!MESSAGE NLS missing message: UsageReportPreferencePage_Description_JBDS in: org.tigris.subversion.subclipse.tools.usage.preferences.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-04 17:25:21.220
+!MESSAGE NLS missing message: UsageReportPreferencePage_AllowReporting_JBDS in: org.tigris.subversion.subclipse.tools.usage.preferences.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-04 17:25:21.221
+!MESSAGE NLS missing message: UsageReportPreferencePage_Error_Saving_JBDS in: org.tigris.subversion.subclipse.tools.usage.preferences.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-03-04 17:25:21.221
+!MESSAGE NLS missing message: GlobalUsageSettings_RemoteProps_URL_JBDS in: org.tigris.subversion.subclipse.tools.usage.preferences.messages
+!SESSION 2014-03-05 15:31:29.290 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 0 2014-03-05 15:47:27.493
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:137)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:327)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:357)
+	at org.eclipse.jface.dialogs.MessageDialog.openWarning(MessageDialog.java:470)
+	at com.forif.rclog.ui.ConnectGroup$RefreshRunnable$1.run(ConnectGroup.java:350)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+Caused by: java.lang.NullPointerException
+	at com.forif.rclog.ui.ConnectGroup$RefreshRunnable$1.run(ConnectGroup.java:348)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	... 33 more
+
+!ENTRY org.eclipse.ui 4 0 2014-03-05 15:47:27.495
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:137)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:327)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:357)
+	at org.eclipse.jface.dialogs.MessageDialog.openWarning(MessageDialog.java:470)
+	at com.forif.rclog.ui.ConnectGroup$RefreshRunnable$1.run(ConnectGroup.java:350)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+Caused by: java.lang.NullPointerException
+	at com.forif.rclog.ui.ConnectGroup$RefreshRunnable$1.run(ConnectGroup.java:348)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	... 33 more
+
+!ENTRY org.eclipse.ui 4 0 2014-03-05 15:47:59.502
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:137)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:327)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:357)
+	at org.eclipse.jface.dialogs.MessageDialog.openWarning(MessageDialog.java:470)
+	at com.forif.rclog.ui.ConnectGroup$RefreshRunnable$1.run(ConnectGroup.java:350)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+Caused by: java.lang.NullPointerException
+	at com.forif.rclog.ui.ConnectGroup$RefreshRunnable$1.run(ConnectGroup.java:348)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	... 33 more
+
+!ENTRY org.eclipse.ui 4 0 2014-03-05 15:47:59.503
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:137)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:327)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:357)
+	at org.eclipse.jface.dialogs.MessageDialog.openWarning(MessageDialog.java:470)
+	at com.forif.rclog.ui.ConnectGroup$RefreshRunnable$1.run(ConnectGroup.java:350)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+Caused by: java.lang.NullPointerException
+	at com.forif.rclog.ui.ConnectGroup$RefreshRunnable$1.run(ConnectGroup.java:348)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	... 33 more
+!SESSION 2014-03-13 10:18:27.938 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ant.core 4 1 2014-03-13 11:08:54.186
+!MESSAGE PermGen space
+
+!ENTRY org.eclipse.ant.core 4 1 2014-03-13 11:08:56.388
+!MESSAGE PermGen space
+!STACK 0
+java.lang.OutOfMemoryError: PermGen space
+
+!ENTRY org.eclipse.ant.core 4 1 2014-03-13 11:08:57.096
+!MESSAGE PermGen space
+!STACK 0
+java.lang.OutOfMemoryError: PermGen space
+
+!ENTRY org.eclipse.core.jobs 4 2 2014-03-13 11:09:06.184
+!MESSAGE An internal error occurred during: "Export Features".
+!STACK 0
+java.lang.OutOfMemoryError: PermGen space

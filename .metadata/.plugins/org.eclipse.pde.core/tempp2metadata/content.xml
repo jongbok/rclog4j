@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.1.0'?>
+<repository name='file:/D:/workspace_version/3.5/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1394676922220'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <units size='4'>
+    <unit id='com.forif.rclog.feature.feature.jar' version='1.0.0'>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='RCLog4j'/>
+        <property name='org.eclipse.equinox.p2.description' value='1. RCLog4j(Runtime Configuration Log4j)는 Apache log4j 1.2.x,&#xA;Eclipse3.5이상에서 동작한다.&#xA;2. RCLog4j Agent와 RCLOG Client로 분리 배포된다.&#xA;3. RCLog4j Agent는 Java Application Software로 Apache log4j 1.2.x를&#xA;사용하여 구현되어진 Application 호출로 동작하고, Broadcast를 지원하여 접속된 사용자에게 동기화를&#xA;지원한다.&#xA;4. RCLog4j Client는 Eclipse plugin으로 배포되어 Agent와 JMX통신을 하며 Runtime환경에서&#xA;Log Category를 등록하고 Log Level을 조절할 수 있다.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://dev.naver.com/projects/rclog'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Jong-Bok,Park'/>
+        <property name='org.eclipse.update.feature.plugin' value='com.forif.rclog.client'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.forif.rclog.feature.feature.jar' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='com.forif.rclog.feature' version='1.0.0'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='com.forif.rclog.feature' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='http://dev.naver.com/projects/rclog' url='http://dev.naver.com/projects/rclog'>
+          1. 이 소프트웨어는 집,회사등엔서 무료로 사용할 수 있는 자유소프트웨어이다.&#xA;2. 이 소프트웨어는 오픈소스(GPL3.0)라이선스 규칙을 준수한다.
+        </license>
+      </licenses>
+      <copyright uri='http://dev.naver.com/projects/rclog' url='http://dev.naver.com/projects/rclog'>
+        Copyright (c) 2014 Jong-Bok,Park(asdkf20@naver.com) All right reserved
+      </copyright>
+    </unit>
+    <unit id='com.forif.rclog.core' version='1.0.0.201403131115'>
+      <update id='com.forif.rclog.core' range='[0.0.0,1.0.0.201403131115)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.name' value='rclog-core'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.forif.rclog.core' version='1.0.0.201403131115'/>
+        <provided namespace='osgi.bundle' name='com.forif.rclog.core' version='1.0.0.201403131115'/>
+        <provided namespace='java.package' name='com.forif.rclog.core' version='0.0.0'/>
+        <provided namespace='java.package' name='com.forif.rclog.jmx' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.forif.rclog.core' version='1.0.0.201403131115'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Export-Package: com.forif.rclog.core,com.forif.rclog.jmx&#xA;Bundle-Name: rclog-core&#xA;Bundle-Version: 1.0.0.201403131115&#xA;Bundle-SymbolicName: com.forif.rclog.core;singleton:=true&#xA;Manifest-Version: 1.0&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.forif.rclog.feature.feature.group' version='1.0.0' singleton='false'>
+      <update id='com.forif.rclog.feature.feature.group' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='RCLog4j'/>
+        <property name='org.eclipse.equinox.p2.description' value='1. RCLog4j(Runtime Configuration Log4j)는 Apache log4j 1.2.x,&#xA;Eclipse3.5이상에서 동작한다.&#xA;2. RCLog4j Agent와 RCLOG Client로 분리 배포된다.&#xA;3. RCLog4j Agent는 Java Application Software로 Apache log4j 1.2.x를&#xA;사용하여 구현되어진 Application 호출로 동작하고, Broadcast를 지원하여 접속된 사용자에게 동기화를&#xA;지원한다.&#xA;4. RCLog4j Client는 Eclipse plugin으로 배포되어 Agent와 JMX통신을 하며 Runtime환경에서&#xA;Log Category를 등록하고 Log Level을 조절할 수 있다.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://dev.naver.com/projects/rclog'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Jong-Bok,Park'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.forif.rclog.feature.feature.group' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.forif.rclog.core' range='[1.0.0.201403131115,1.0.0.201403131115]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.forif.rclog.client' range='[1.0.0.201403131115,1.0.0.201403131115]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.forif.rclog.feature.feature.jar' range='[1.0.0,1.0.0]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='http://dev.naver.com/projects/rclog' url='http://dev.naver.com/projects/rclog'>
+          1. 이 소프트웨어는 집,회사등엔서 무료로 사용할 수 있는 자유소프트웨어이다.&#xA;2. 이 소프트웨어는 오픈소스(GPL3.0)라이선스 규칙을 준수한다.
+        </license>
+      </licenses>
+      <copyright uri='http://dev.naver.com/projects/rclog' url='http://dev.naver.com/projects/rclog'>
+        Copyright (c) 2014 Jong-Bok,Park(asdkf20@naver.com) All right reserved
+      </copyright>
+    </unit>
+    <unit id='com.forif.rclog.client' version='1.0.0.201403131115'>
+      <update id='com.forif.rclog.client' range='[0.0.0,1.0.0.201403131115)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Runtime Configuration Log4j'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Jong-Bok,Park'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.forif.rclog.client' version='1.0.0.201403131115'/>
+        <provided namespace='osgi.bundle' name='com.forif.rclog.client' version='1.0.0.201403131115'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='osgi.bundle' name='com.forif.rclog.core' range='1.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='3.4.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.forif.rclog.client' version='1.0.0.201403131115'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-Vendor: Jong-Bok,Park&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Activator: com.forif.rclog.client.Activator&#xA;Bundle-RequiredExecutionEnvironment: JavaSE-1.6&#xA;Bundle-ClassPath: lib/jmxlogger-0.3.0.jar,lib/commons-lang-2.1.jar,.&#xA;Require-Bundle: com.forif.rclog.core;bundle-version=&quot;1.0.0&quot;,org.eclipse.core.runtime;bundle-version=&quot;3.5.0&quot;,org.eclipse.ui;bundle-version=&quot;3.5.0&quot;,org.eclipse.ui.console;bundle-version=&quot;3.4.0&quot;&#xA;Bundle-Name: Runtime Configuration Log4j&#xA;Bundle-ActivationPolicy: lazy&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.forif.rclog.client;singleton:=true&#xA;Bundle-Version: 1.0.0.201403131115
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

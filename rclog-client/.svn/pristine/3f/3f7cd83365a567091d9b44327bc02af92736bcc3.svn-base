@@ -1,0 +1,8 @@
+source.. = src/
+output.. = target/classes/
+bin.includes = META-INF/,\
+               .,\
+               plugin.xml,\
+               lib/jmxlogger-0.3.0.jar,\
+               icons/sample_decorator.gif,\
+               lib/commons-lang-2.1.jar

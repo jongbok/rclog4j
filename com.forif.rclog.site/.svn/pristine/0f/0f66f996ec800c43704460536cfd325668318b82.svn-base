@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.forif.rclog.feature_1.0.0.beta.jar" id="com.forif.rclog.feature" version="1.0.0.beta">
+      <category name="rclog4j"/>
+   </feature>
+   <category-def name="rclog4j" label="Runtime Configuration Log4j"/>
+</site>

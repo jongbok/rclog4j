@@ -1,0 +1,96 @@
+/*
+ * @(#) RCLogManager.java 1.0, 2014. 2. 18.
+ * 
+ * Copyright (c) 2014 Jong-Bok,Park  All rights reserved.
+ */
+ 
+package com.forif.rclog.agent;
+
+import java.lang.management.ManagementFactory;
+import java.util.List;
+
+import javax.management.MBeanServer;
+import javax.management.ObjectName;
+
+import jmxlogger.integration.log4j.JmxLogAppender;
+
+import org.apache.log4j.Appender;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+
+import com.forif.rclog.core.Category;
+import com.forif.rclog.core.RCLogException;
+import com.forif.rclog.core.RCLogInfo;
+import com.forif.rclog.jmx.CategoryEmitter;
+import com.forif.rclog.jmx.CategoryEmitterMBean;
+
+/**
+ * @author Jong-Bok,Park (asdkf20@naver.com)
+ * @version 1.0,  2014. 2. 18.
+ * 
+ */
+public final class RCLogManager implements RCLogEditable {
+
+	private static String layout = "[%p] %d %c %M - %m%n";
+	private static Level level = Level.DEBUG;
+	private static CategoryEmitterMBean categoryEmitter = null;
+	private static JmxLogAppender jmxAppender = null;
+	private final static RCLogManager LOG_MANAGER = new RCLogManager();
+	private final static String APPENDER_NAME = "rclog4j.jmxlogger";
+	
+	private RCLogManager(){ }
+	
+	public static List<Category> getCurrentCategories(){
+		if(categoryEmitter != null)
+			return categoryEmitter.getCategories();
+		return null;
+	}
+	
+	public void setJmxLogger(String name, String level){
+		Logger logger = Logger.getLogger(name);
+		Appender appender = logger.getAppender(APPENDER_NAME);
+		if(appender == null)
+			logger.addAppender(jmxAppender);
+		logger.setLevel(Level.toLevel(level));
+//		logger.setAdditivity(false);
+	}
+	
+	public void unsetJmxLogger(String name){
+		Logger logger = Logger.getLogger(name);
+		logger.removeAppender(APPENDER_NAME);
+	}
+	
+	public static void saveCategories(List<Category> categories){
+		categoryEmitter.setCategories(categories, "Agent has changed!");
+	}
+	
+	public static void setLayout(String layout){
+		RCLogManager.layout = layout;
+	}
+	
+	public static void setLevel(Level level){
+		RCLogManager.level = level;
+	}
+	
+	public static void start(){
+		if(jmxAppender == null){
+			jmxAppender = new JmxLogAppender();
+			jmxAppender.setThreshold(level);
+			jmxAppender.setObjectName(RCLogInfo.JMXLOG_OBJECT_NAME);
+			jmxAppender.setLayout(new PatternLayout(layout));
+			jmxAppender.setName(APPENDER_NAME);
+			jmxAppender.activateOptions();
+		}
+		if(categoryEmitter == null){
+			categoryEmitter = new CategoryEmitter(LOG_MANAGER);
+			MBeanServer server = ManagementFactory.getPlatformMBeanServer();
+			try{
+				server.registerMBean(categoryEmitter, new ObjectName(RCLogInfo.CATEOGRY_OBJECT_NAME));
+			}catch(Exception ex){
+				throw new RCLogException(ex);
+			}
+		}
+		
+	}
+}

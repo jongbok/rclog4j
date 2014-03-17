@@ -1,0 +1,47 @@
+/*
+ * @(#) RCLogAgentListener.java 1.0, 2014. 2. 27.
+ * 
+ * Copyright (c) 2014 Jong-Bok,Park  All rights reserved.
+ */
+ 
+package com.forif.rclog.agent;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+import org.apache.commons.lang.StringUtils;
+import org.apache.log4j.Level;
+
+/**
+ * @author Jong-Bok,Park (asdkf20@naver.com)
+ * @version 1.0,  2014. 2. 27.
+ * 
+ */
+public class RCLogAgentListener implements ServletContextListener {
+
+	public RCLogAgentListener() {}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletContextListener#contextDestroyed(javax.servlet.ServletContextEvent)
+	 */
+	public void contextDestroyed(ServletContextEvent event) {
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletContextListener#contextInitialized(javax.servlet.ServletContextEvent)
+	 */
+	public void contextInitialized(ServletContextEvent event) {
+		ServletContext context = event.getServletContext();
+		if(context != null){
+			String layout = context.getInitParameter("layout");
+			String level = context.getInitParameter("level");
+			if(StringUtils.isNotEmpty(layout))
+				RCLogManager.setLayout(layout);
+			if(StringUtils.isNotEmpty(level))
+				RCLogManager.setLevel(Level.toLevel(level));
+		}
+		RCLogManager.start();
+	}
+
+}
