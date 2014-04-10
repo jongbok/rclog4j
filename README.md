@@ -35,11 +35,11 @@ rclog4j
    <listener-class>com.forif.rclog.agent.RCLogAgentListener</listener-class>
 </listener> ```			
      * context-param을 추가할 경우 테스트용 log를 1초간격으로 발생시킨다.
-       {{{
+       ```
 <context-param>
    <param-name>rclog4j.test</param-name>
    <param-value>true</param-value>
-</context-param> }}}			
+</context-param> ```
      * test log category(debug,info,error)
        * com.forif.rclog.agent
        * com.forif.rclog
@@ -55,8 +55,8 @@ rclog4j
        * -Dcom.sun.management.jmxremote.ssl=false
      * 테스트는 com.forif.rclog.test.RCLogTest 호출로 확인할 수 있다.(첨부 start.bat 참고)
      * main method에 코드삽입
-       {{{ 
-    com.forif.rclog.agent.RCLogManager.start();  }}}
+       ```
+    com.forif.rclog.agent.RCLogManager.start();  ```
 
  > RCLog4j Client
    * rclog-client_*.zip 파일을 압축을 해제 한다.
@@ -66,7 +66,7 @@ rclog4j
 
 === 사용법 ===
 * 설치된 Agent IP,Port를 입력하고 Connect버튼을 클릭한다.
-attachment:rclog1.JPG
+![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog1.JPG)
 * Agent에 연결되면 RCLog4j로 등록된 Log category가 조회되고 설정된 정보에 대한 Log가 콘솔창에 기록된다.(최초 접속자라면 접속메세지만 볼수있고 등록된 정보가 존재하지 않는다.)
 attachment:rclog2.JPG
 * log level을 debug로 조정한다.
