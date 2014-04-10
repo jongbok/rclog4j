@@ -30,10 +30,10 @@ rclog4j
        * -Dcom.sun.management.jmxremote.authenticate=false
        * -Dcom.sun.management.jmxremote.ssl=false
      * web.xml에 listener를 등록한다.
-       {{{
+       ```
 <listener>
    <listener-class>com.forif.rclog.agent.RCLogAgentListener</listener-class>
-</listener> }}}			
+</listener> ```			
      * context-param을 추가할 경우 테스트용 log를 1초간격으로 발생시킨다.
        {{{
 <context-param>
