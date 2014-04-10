@@ -5,6 +5,7 @@ rclog4j
  * RCLog4j Agent와 RCLOG Client로 분리 배포된다.
  * RCLog4j Agent는 Java Application Software로 Apache log4j 1.2.x를 사용하여 구현되어진 Application 호출로 동작하고, Broadcast를 지원하여 접속된 사용자에게 동기화를 지원한다.
  * RCLog4j Client는 Eclipse plugin으로 배포되어 Agent와 JMX통신을 하며 Runtime환경에서 Log Category를 등록하고 Log Level을 조절할 수 있다.
+
 ###배경
  * 인프라시스템 관리하던중 많은 운영개발자들이 운영시스템에 DEBUG성격의 Log를 INFO로 사용하는걸 발견하고
    개선하기위해 노력했지만 쉽게 개선되지 않았고, 단일시스템 LOG파일을 Size증가로 인해
@@ -12,6 +13,7 @@ rclog4j
    개발자들은 DEBUG성격의 Log를 ERROR Level로 코드를 바꾸는 악순환발생으로
    개발자들이 DEBUG성격의 Log가 왜 꼭 필요한가를 확인해보니 대부분 특정시점 
    또는 운영에만 문제가 발생할 경우 이를 디버깅하기위해 사용함을 알 수 있었다.
+
 ###목적
  * 개발자들이 운영에서 원하는 시점에 확인하고자하는 Log의 일부분을 Debug Level까지 확인가능 하도록 함으로써
    Code상에 Log Level을 본래의 성격에 맞게 사용하고, Log관리 및 분석이 용이한 시스템될 수 있도록 지원을 목적으로 한다.
@@ -19,6 +21,7 @@ rclog4j
 ###라이선스
  * 이 소프트웨어는 집,회사등에서 무료로 자유롭게 사용할 수 있는 자유소프트웨어이다. 
  * 이 소프트웨어는 오픈소스(GPL3.0) 라이선스를 준수한다.
+
 ###설치방법
  > RCLog4j Agent
    * Web Application(첨부 web.xml 참고)
@@ -85,8 +88,6 @@ rclog4j
 ![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog9.JPG)
 * Release버튼을 클릭하면 Agent와 연결종료된다.
 ![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog10.JPG)
-
-
 
 ###관련정보 링크
  * http://blog.naver.com/asdkf20 [공식블로그] 
