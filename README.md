@@ -11,15 +11,15 @@ rclog4j
    개선하기위해 노력했지만 쉽게 개선되지 않았고, 단일시스템 LOG파일을 Size증가로 인해
    Log관리작업소요가 증가하고 Log분석시간 증가로 악순환이 발생함으로 LOG Level을 ERROR로 올렸지만
    개발자들은 DEBUG성격의 Log를 ERROR Level로 코드를 바꾸는 악순환발생으로
-   개발자들이 DEBUG성격의 Log가 왜 꼭 필요한가를 확인해보니 대부분 특정시점 
+   개발자들이 DEBUG성격의 Log가 왜 꼭 필요한가를 확인해보니 대부분 특정시점
    또는 운영에만 문제가 발생할 경우 이를 디버깅하기위해 사용함을 알 수 있었다.
 
 ###목적
  * 개발자들이 운영에서 원하는 시점에 확인하고자하는 Log의 일부분을 Debug Level까지 확인가능 하도록 함으로써
    Code상에 Log Level을 본래의 성격에 맞게 사용하고, Log관리 및 분석이 용이한 시스템될 수 있도록 지원을 목적으로 한다.
- 
+
 ###라이선스
- * 이 소프트웨어는 집,회사등에서 무료로 자유롭게 사용할 수 있는 자유소프트웨어이다. 
+ * 이 소프트웨어는 집,회사등에서 무료로 자유롭게 사용할 수 있는 자유소프트웨어이다.
  * 이 소프트웨어는 오픈소스(GPL3.0) 라이선스를 준수한다.
 
 ###설치방법
@@ -38,6 +38,7 @@ rclog4j
    <listener-class>com.forif.rclog.agent.RCLogAgentListener</listener-class>
 </listener>
 ```
+
      * context-param을 추가할 경우 테스트용 log를 1초간격으로 발생시킨다.
 ```
 <context-param>
@@ -45,6 +46,7 @@ rclog4j
    <param-value>true</param-value>
 </context-param>
 ```
+
      * test log category(debug,info,error)
        * com.forif.rclog.agent
        * com.forif.rclog
