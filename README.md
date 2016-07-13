@@ -69,28 +69,22 @@ rclog4j
 
 ###사용법
 * 설치된 Agent IP,Port를 입력하고 Connect버튼을 클릭한다.
-![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog1.JPG)
+![alt tag](https://raw.githubusercontent.com/jongbok/rclog4j/master/docs/images/rclog1.JPG)
 * Agent에 연결되면 RCLog4j로 등록된 Log category가 조회되고 설정된 정보에 대한 Log가 콘솔창에 기록된다.(최초 접속자라면 접속메세지만 볼수있고 등록된 정보가 존재하지 않는다.)
-![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog2.JPG)
+![alt tag](https://raw.githubusercontent.com/jongbok/rclog4j/master/docs/images/rclog2.JPG)
 * log level을 debug로 조정한다.
-![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog3.JPG)
+![alt tag](https://raw.githubusercontent.com/jongbok/rclog4j/master/docs/images/rclog3.JPG)
 * Save버튼을 클릭한다.
-![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog4.JPG)
+![alt tag](https://raw.githubusercontent.com/jongbok/rclog4j/master/docs/images/rclog4.JPG)
 * Agent로부터 변경메세지를 수신하고 Log가 변경된것을 확인할 수 있다.
-![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog5.JPG)
+![alt tag](https://raw.githubusercontent.com/jongbok/rclog4j/master/docs/images/rclog5.JPG)
 * 새로운 category를 추가한다.
-![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog6.JPG)
+![alt tag](https://raw.githubusercontent.com/jongbok/rclog4j/master/docs/images/rclog6.JPG)
 * Save버튼 클릭적용후 log가 변경되는것을 확인할 수 있다.
-![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog7.JPG)
+![alt tag](https://raw.githubusercontent.com/jongbok/rclog4j/master/docs/images/rclog7.JPG)
 * Delete버튼 클릭으로 category를 삭제한다.
-![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog8.JPG)
+![alt tag](https://raw.githubusercontent.com/jongbok/rclog4j/master/docs/images/rclog8.JPG)
 * Save버튼 클릭적용후 log가 변경되는것을 확인할 수 있다.
-![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog9.JPG)
+![alt tag](https://raw.githubusercontent.com/jongbok/rclog4j/master/docs/images/rclog9.JPG)
 * Release버튼을 클릭하면 Agent와 연결종료된다.
-![alt tag](http://dev.naver.com/wiki/rclog/pds/FrontPage/rclog10.JPG)
-
-###관련정보 링크
- * http://blog.naver.com/asdkf20 [공식블로그] 
- * http://dev.naver.com/projects/noti-j [noti-J message push]
- * http://dev.naver.com/projects/s-cross [S-Cross Cross-Site Request Security] 
- * http://dev.naver.com/projects/wlog [Wlog Web based Fast Log Viewer]
+![alt tag](https://raw.githubusercontent.com/jongbok/rclog4j/master/docs/images/rclog10.JPG)
