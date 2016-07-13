@@ -33,16 +33,18 @@ rclog4j
        * -Dcom.sun.management.jmxremote.authenticate=false
        * -Dcom.sun.management.jmxremote.ssl=false
      * web.xml에 listener를 등록한다.
-       ```
+```
 <listener>
    <listener-class>com.forif.rclog.agent.RCLogAgentListener</listener-class>
-</listener> ```			
+</listener>
+```
      * context-param을 추가할 경우 테스트용 log를 1초간격으로 발생시킨다.
-       ```
+```
 <context-param>
    <param-name>rclog4j.test</param-name>
    <param-value>true</param-value>
-</context-param> ```
+</context-param>
+```
      * test log category(debug,info,error)
        * com.forif.rclog.agent
        * com.forif.rclog
@@ -58,8 +60,9 @@ rclog4j
        * -Dcom.sun.management.jmxremote.ssl=false
      * 테스트는 com.forif.rclog.test.RCLogTest 호출로 확인할 수 있다.(첨부 start.bat 참고)
      * main method에 코드삽입
-       ```
-    com.forif.rclog.agent.RCLogManager.start();  ```
+```
+    com.forif.rclog.agent.RCLogManager.start();
+```
 
  > RCLog4j Client
    * rclog-client_*.zip 파일을 압축을 해제 한다.
